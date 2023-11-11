@@ -95,22 +95,49 @@ const arrayDate = [
 
 const libriMillennio = libri.filter((el) => el.pubblicazione > 2000);
 
-console.log(libriMillennio);
+//console.log(libriMillennio);
 
-// Filtra oggetti in base a una stringa: Data un'array di oggetti che rappresentano utenti, filtra gli utenti che hanno una email che contiene la parola "gmail".
+// Filtra oggetti in base a una stringa: Dato un'array di oggetti che rappresentano utenti, filtra gli utenti che hanno una email che contiene la parola "gmail".
+const mailGmail = utenti.filter((el) => el.email.includes('gmail'));
+
+//console.log(mailGmail);
 
 // Filtra oggetti con proprietà multiple: Data un'array di oggetti che rappresentano prodotti, filtra i prodotti che sono in stock (proprietà "inStock" è true) e costano meno di $50 (proprietà "prezzo" è inferiore a $50).
 
+const prodottiInStock = prodotti.filter((el) => el.inStock === true);
+
+//console.log(prodottiInStock);
+
 // Filtra oggetti con proprietà composte: Data un'array di oggetti che rappresentano città, filtra le città che si trovano in un determinato paese (proprietà "paese" corrisponde al paese desiderato).
+
+const cittaItaliane = citta.filter((el) => el.paese === 'Italia');
+
+//console.log(cittaItaliane);
 
 // Filtra oggetti con condizioni complesse: Data un'array di oggetti che rappresentano studenti, filtra gli studenti che hanno ottenuto un punteggio superiore a 80 in matematica e un punteggio superiore a 90 in scienze.
 
+const studentiMigliori = studenti.filter(
+  (el) => el.matematica > 80 && el.scienze > 90
+);
+
+//console.log(studentiMigliori);
+
 // Filtra oggetti con un array di valori: Data un'array di oggetti che rappresentano ordini, filtra gli ordini che hanno uno stato specifico, ad esempio "spedito" o "in sospeso".
+
+const ordiniSpeditiSospesi = ordini.filter(
+  (el) => el.stato === 'spedito' || el.stato === 'in sospeso'
+);
+
+//console.log(ordiniSpeditiSospesi);
 
 // Filtra oggetti con una data specifica: Data un'array di oggetti che rappresentano eventi, filtra gli eventi che si svolgono in una data specifica (proprietà "data" corrisponde alla data desiderata).
 
+const eventiGiornata = eventi.filter((el) => el.data === '2023-08-25');
+
+//console.log(eventiGiornata);
+
 // Filtra oggetti con una proprietà booleana: Data un'array di oggetti che rappresentano articoli, filtra gli articoli che sono in vendita (proprietà "inVendita" è true).
 
-// Filtra oggetti in base a una lista di valori: Data un'array di oggetti che rappresentano animali, filtra gli animali che fanno parte di una lista specifica di specie (ad esempio, "gatto", "cane", "pappagallo").
+const articoliDisponibili = articoli.filter((el) => el.inVendita === true);
 
-// Filtra oggetti in base a un intervallo di età: Data un'array di oggetti che rappresentano persone, filtra le persone che hanno un'età compresa tra un valore minimo e un valore massimo.
+//console.log(articoliDisponibili);
