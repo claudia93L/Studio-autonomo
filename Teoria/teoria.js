@@ -44,6 +44,16 @@ Caso d'uso:
 
 /* 
     Permette di filtrare un array, ritornando in un nuovo array soltanto gli elementi che rispecchiano la condizione specificata
+
+    Se vogliamo cercare più occorrenze, possiamo utilizzare arr.filter(fn).
+
+    La sintassi è pressoché la stessa di find, ma ritorna un array contenente tutte le corrispondenze trovate:
+
+    let results = arr.filter(function(item, index, array) {
+      // se un item è true viene messo dentro results e l'iterazione continua
+      // ritorna un array vuoto qualora nessun elemento ritornasse true
+    });
+
 */
 
 // FOREACH

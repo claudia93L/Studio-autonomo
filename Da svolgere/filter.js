@@ -89,31 +89,13 @@ const arrayDate = [
   '2023-10-05',
 ];
 
-// FILTER - Array
-
-// Filtra oggetti con una proprietà specifica: Data un'array di oggetti rappresentanti libri, filtra gli oggetti per trovare i libri che sono stati pubblicati dopo il 2000.
-
-// Filtra oggetti in base a una stringa: Data un'array di oggetti che rappresentano utenti, filtra gli utenti che hanno una email che contiene la parola "gmail".
-
-// Filtra oggetti con proprietà multiple: Data un'array di oggetti che rappresentano prodotti, filtra i prodotti che sono in stock (proprietà "inStock" è true) e costano meno di $50 (proprietà "prezzo" è inferiore a $50).
-
-// Filtra oggetti con proprietà composte: Data un'array di oggetti che rappresentano città, filtra le città che si trovano in un determinato paese (proprietà "paese" corrisponde al paese desiderato).
-
-// Filtra oggetti con condizioni complesse: Data un'array di oggetti che rappresentano studenti, filtra gli studenti che hanno ottenuto un punteggio superiore a 80 in matematica e un punteggio superiore a 90 in scienze.
-
-// Filtra oggetti con un array di valori: Data un'array di oggetti che rappresentano ordini, filtra gli ordini che hanno uno stato specifico, ad esempio "spedito" o "in sospeso".
-
-// Filtra oggetti con una data specifica: Data un'array di oggetti che rappresentano eventi, filtra gli eventi che si svolgono in una data specifica (proprietà "data" corrisponde alla data desiderata).
-
-// Filtra oggetti con una proprietà booleana: Data un'array di oggetti che rappresentano articoli, filtra gli articoli che sono in vendita (proprietà "inVendita" è true).
-
-// Filtra oggetti in base a una lista di valori: Data un'array di oggetti che rappresentano animali, filtra gli animali che fanno parte di una lista specifica di specie (ad esempio, "gatto", "cane", "pappagallo").
-
-// Filtra oggetti in base a un intervallo di età: Data un'array di oggetti che rappresentano persone, filtra le persone che hanno un'età compresa tra un valore minimo e un valore massimo.
-
 // FILTER - Array di oggetti
 
 // Filtra oggetti con una proprietà specifica: Data un'array di oggetti rappresentanti libri, filtra gli oggetti per trovare i libri che sono stati pubblicati dopo il 2000.
+
+const libriMillennio = libri.filter((el) => el.pubblicazione > 2000);
+
+console.log(libriMillennio);
 
 // Filtra oggetti in base a una stringa: Data un'array di oggetti che rappresentano utenti, filtra gli utenti che hanno una email che contiene la parola "gmail".
 
