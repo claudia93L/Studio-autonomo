@@ -60,6 +60,8 @@ Caso d'uso:
 
 /*
 
+Quando vogliamo iterare su un array – possiamo utilizzare forEach, for o for..of.
+
 Consente di eseguire una funzione su ogni elemento dell’array e NON crea un nuovo array. 
 
 Sintassi:
@@ -72,6 +74,8 @@ arr.forEach(function(item, index, array) {
 // MAP
 
 /*
+
+Quando invece abbiamo la necessità di iterare e ritornare dati per ogni elemento – possiamo usare map.
 
 Stessa logica di funzionamento del forEach(), ma ritorna un array con gli elementi ciclati ed eventuali condizioni da rispettare
 
@@ -122,5 +126,31 @@ arr.slice([start], [end])
 Ritorna un nuovo array contente tutti gli elementi a partire da "start" fino ad "end" ("end" escluso). Sia start che end possono essere negativi; in tal caso si inizierà a contare dalla coda dell’array.
 
 Funziona come str.slice, ma crea dei sotto-array piuttosto che sotto-stringhe.
+
+*/
+
+// REDUCE
+
+/*
+
+I metodi arr.reduce e arr.reduceRight fanno parte della stessa categoria, ma sono leggermente più complessi. Vengono utilizzati per calcolare un singolo valore basato sul contenuto dell’array.
+
+La sintassi è:
+
+let value = arr.reduce(function(accumulator, item, index, array) {
+  // ...
+}, [initial]);
+
+La funzione viene applicata ad ogni elemento dell’array uno dopo l’altro, passando il risultato alla chiamata successiva.
+
+Argomenti:
+
+accumulator – è il risultato della precedente chiamata, uguale ad initial per la prima chiamata (se initial viene fornito).
+item – è l’attuale elemento dell’array.
+index – la sua posizione.
+array – l’array.
+Quando la funzione è stata applicata, il risultato viene passato alla chiamata successiva.
+
+Sembra complicato, ma non lo è se pensate al primo argomento come un “accumulatore” che memorizza il risultato delle precedenti esecuzioni. E alla fine diventa il risultato di reduce.
 
 */
