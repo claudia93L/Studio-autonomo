@@ -92,17 +92,62 @@ const arrayDate = [
 
 //   Calcola la somma di tutti i numeri in un array di numeri utilizzando reduce().
 
+const somma = numeri.reduce((somma, numero) => somma + numero, 0);
+
+//console.log(somma);
+
 //   Trova il numero più grande in un array di numeri utilizzando reduce().
+
+const numMax = numeri.reduce(
+  (maggiore, numero) => Math.max(maggiore, numero),
+  0
+);
+
+//console.log(numMax);
 
 //   Concatena tutte le stringhe in un array di stringhe utilizzando reduce().
 
+// Valore iniziale pari a stringa vuota '' perchè sto usando concat. Quando si inizia con una stringa vuota come accumulatore, si garantisce che il risultato finale sia una stringa, poiché la concatenazione di una stringa con qualsiasi altro tipo di dato restituirà una stringa.
+const stringheUnite = stringhe.reduce(
+  (accumulatore, stringa) => accumulatore.concat(stringa),
+  ''
+);
+
+//console.log(stringheUnite);
+
 //   Calcola il prodotto di tutti i numeri in un array di numeri utilizzando reduce().
+
+//Se inizializzassi l'accumulatore a 0, ogni moltiplicazione successiva sarebbe influenzata da quel 0, e il risultato finale sarebbe sempre 0. Si deve quindi partire da 1
+const prodottoNumeri = numeri.reduce(
+  (prodotto, numero) => prodotto * numero,
+  1
+);
+
+//console.log(prodottoNumeri);
 
 //   Trova il numero più piccolo in un array di numeri utilizzando reduce().
 
+const numeroMinore = numeri.reduce((minore, numero) =>
+  Math.min(minore, numero)
+);
+
+//console.log(numeroMinore);
+
 //   Calcola la somma delle lunghezze delle stringhe in un array di stringhe utilizzando reduce().
 
+const lunghezzaStringhe = stringhe.reduce(
+  (lunghezza, stringa) => lunghezza + stringa.length,
+  0
+);
+
+//console.log(lunghezzaStringhe);
+
 //   Trova il primo numero pari in un array di numeri utilizzando reduce().
+
+// DA CONTINUARE DOMANI
+const numeroPari = numeri.reduce((numPari, numero) => numero % 2 === 0);
+
+console.log(numeroPari);
 
 //   Crea una stringa che contenga la concatenazione di tutti gli elementi di un array di stringhe, separati da virgole, utilizzando reduce().
 

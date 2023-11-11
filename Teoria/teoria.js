@@ -153,4 +153,8 @@ Quando la funzione è stata applicata, il risultato viene passato alla chiamata 
 
 Sembra complicato, ma non lo è se pensate al primo argomento come un “accumulatore” che memorizza il risultato delle precedenti esecuzioni. E alla fine diventa il risultato di reduce.
 
+Se non c’è un valore iniziale, allora reduce prende il primo elemento dell’array come valore iniziale ed inizia l’iterazione dal secondo elemento. Quindi è fortemente consigliato di specificare sempre un valore iniziale, soprattutto per evitare problemi in caso di array vuoti.
+
+Il metodo arr.reduceRight fa esattamente la stessa cosa, ma da destra verso sinistra.
+
 */
