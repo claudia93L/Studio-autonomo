@@ -65,7 +65,7 @@ const articoli = [
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Array di stringhe
-const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
+const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'Elefante'];
 
 // Array di stringhe e numeri
 const stringheENumeri = [
@@ -95,21 +95,33 @@ const arrayDate = [
 
 //   Trova l'indice del primo numero pari in un array di numeri utilizzando findIndex().
 
+const indiceNumPari = numeri.findIndex((el) => el % 2 === 0);
+
+//console.log(indiceNumPari);
+
 //   Trova l'indice della prima stringa in un array di stringhe con una lunghezza superiore a 8 caratteri utilizzando findIndex().
 
 //   Trova l'indice della prima stringa in un array di stringhe che contiene la lettera 'a' utilizzando findIndex().
 
+const stringaConLettera = stringhe.findIndex((el) =>
+  el.toLowerCase().includes('a')
+);
+
+//console.log(stringaConLettera);
+
 //   Trova l'indice del primo numero divisibile per 7 in un array di numeri utilizzando findIndex().
 
 //   Trova l'indice della prima parola in un array di stringhe che è in maiuscolo utilizzando findIndex().
+
+const parolaMaiuscola = stringhe.findIndex((el) => el.toUpperCase() === el);
+
+//console.log(parolaMaiuscola);
 
 //   Trova l'indice della prima data nel passato in un array di date utilizzando findIndex().
 
 //   Trova l'indice del primo numero maggiore di 50 in un array di numeri utilizzando findIndex().
 
 //   Trova l'indice della prima stringa in un array di stringhe che rappresenta una frase utilizzando findIndex().
-
-//   Trova l'indice del primo valore false in un array di booleani utilizzando findIndex().
 
 // FINDINDEX - Array di oggetti
 
@@ -125,6 +137,10 @@ const arrayDate = [
 
 //   Trova l'indice del primo ordine nell'array ordini con lo stato 'completato' utilizzando findIndex().
 
+const ordineCompletato = ordini.findIndex((el) => el.stato === 'completato');
+
+//console.log(ordineCompletato);
+
 //   Trova l'indice del primo evento nell'array eventi che si svolge dopo il 2023-09-01 utilizzando findIndex().
 
 //   Trova l'indice del primo articolo nell'array articoli che non è in vendita utilizzando findIndex().
@@ -132,3 +148,7 @@ const arrayDate = [
 //   Trova l'indice del primo libro nell'array libri con un titolo di lunghezza maggiore di 10 caratteri utilizzando findIndex().
 
 //   Trova l'indice del primo utente nell'array utenti con un nome di lunghezza maggiore di 5 caratteri utilizzando findIndex().
+
+const nomeLungo = utenti.findIndex((el) => el.nome.length > 5);
+
+//console.log(nomeLungo);

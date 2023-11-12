@@ -186,3 +186,79 @@ array è l’array stesso.
 Se la chiamata ritorna true, la ricerca viene interrotta e viene ritornato item. Se non viene trovato nulla verrà ritornato undefined.
 
 */
+
+// EVERY E SOME
+
+/*
+
+Il metodo EVERY verifica se all'interno dell'array tutti gli elementi rispecchiano una data condizione fornita da una funzione e ritorna un valore booleano.
+
+Sintassi:
+
+every(callbackFn)
+every(callbackFn, thisArg)
+
+Esempio:
+
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+
+Il metodo SOME verifica se all'interno dell'array almeno un valore tra gli elementi rispecchiano una data condizione fornita da una funzine e ritorna un valore booleano
+
+Sintassi: 
+
+some(callbackFn)
+some(callbackFn, thisArg)
+
+Esempio: 
+
+const array = [1, 2, 3, 4, 5];
+
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+
+*/
+
+// CONCAT
+
+/*
+
+Il metodo arr.concat crea un nuovo array che include valori di altri array, o elementi aggiuntivi.
+
+La sintassi è:
+
+arr.concat(arg1, arg2...)
+Accetta un numero arbitrario di argomenti – sia array che valori.
+
+Il risultato è un nuovo array contenente gli elementi di arr, seguiti da arg1, arg2 etc.
+
+Se un argomento argN è un array, tutti i suoi elementi vengono copiati. Altrimenti viene copiato solamente l’argomento stesso.
+
+*/
+
+// SORT, REVERSE, SPLICE
+
+// Da notare che i metodi sort, reverse e splice modificano l’array stesso.
+
+/*
+
+AGGIUNTA E RIMOZIONE ELEMENTI
+
+arr.push(...items) – aggiunge un elemento in coda,
+arr.pop() – estrae un elemento dalla coda,
+arr.shift() – estrae un elemento dalla testa,
+arr.unshift(...items) – aggiunge un elemento in testa.
+
+Vari altri metodi utili:
+
+arr.fill(value, start, end) – riempie l’array con value da start fino a end.
+
+arr.copyWithin(target, start, end) – copia gli elementi da start fino a end dentro se stesso, nella posizione target (sovrascrivendo gli elementi contenuti).
+
+arr.flat(depth)/arr.flatMap(fn) crea un nuovo array monodimensionale partendo da un array multidimensionale.
+
+*/
