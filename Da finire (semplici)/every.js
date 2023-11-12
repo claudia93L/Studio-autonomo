@@ -93,9 +93,21 @@ const arrayDate = [
 
 //   Verifica se tutti i numeri in un array di numeri sono pari utilizzando every().
 
+const pari = (el) => el % 2 === 0;
+
+//console.log(numeri.every(pari));
+
 //   Controlla se tutti i numeri in un array di numeri sono maggiori di 10 utilizzando every().
 
+const maggioriDiDieci = (el) => el > 10;
+
+//console.log(numeri.every(maggioriDiDieci));
+
 //   Verifica se tutte le stringhe in un array di stringhe hanno una lunghezza superiore a 5 caratteri utilizzando every().
+
+const stringheLunghe = (el) => el.length > 5;
+
+//console.log(stringhe.every(stringheLunghe));
 
 //   Controlla se tutte le stringhe in un array di stringhe iniziano con la lettera 'A' utilizzando every().
 
@@ -125,6 +137,10 @@ const arrayDate = [
 
 //   Controlla se tutti gli ordini nell'array ordini hanno lo stato 'spedito' utilizzando every().
 
+const ordiniSpediti = (el) => el.stato === 'spedito';
+
+//console.log(ordini.every(ordiniSpediti));
+
 //   Verifica se tutti gli eventi nell'array eventi si svolgono dopo il 2023-08-01 utilizzando every().
 
 //   Controlla se tutti gli articoli nell'array articoli sono in vendita utilizzando every().
@@ -132,3 +148,7 @@ const arrayDate = [
 //   Verifica se tutti i libri nell'array libri hanno un titolo con una lunghezza maggiore di 5 caratteri utilizzando every().
 
 //   Controlla se tutti gli utenti nell'array utenti hanno nomi con una lunghezza maggiore di 3 caratteri utilizzando every().
+
+const lunghezzaNomi = (el) => el.nome.length > 5;
+
+//console.log(utenti.every(lunghezzaNomi));

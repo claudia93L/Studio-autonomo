@@ -63,6 +63,7 @@ const articoli = [
 ];
 
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numeri2 = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Array di stringhe
 const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
@@ -93,21 +94,24 @@ const arrayDate = [
 
 //   Unisci due array di numeri in uno solo utilizzando il metodo concat().
 
+const numeriUniti = numeri.concat(numeri2);
+
+//console.log(numeriUniti);
+
 //   Unisci due array di stringhe in uno solo utilizzando il metodo concat().
 
-//   Crea un nuovo array di numeri e concatena il risultato con l'array originale di numeri utilizzando il metodo concat().
+const stringheUnite = stringhe.concat(stringheENumeri);
 
-//   Crea un nuovo array di stringhe e concatena il risultato con l'array originale di stringhe utilizzando il metodo concat().
-
-//   Unisci tre array di numeri in uno solo utilizzando il metodo concat().
-
-//   Unisci tre array di stringhe in uno solo utilizzando il metodo concat().
+//console.log(stringheUnite);
 
 //   Crea un nuovo array di numeri, un array di stringhe e un array di oggetti e concatena il risultato con l'array originale di numeri, stringhe e oggetti utilizzando il metodo concat().
 
 // CONCAT - Array di oggetti
 
 //   Unisci due array di libri in uno solo utilizzando il metodo concat().
+
+const arrayMisto1 = libri.concat(ordini);
+//console.log(arrayMisto1);
 
 //   Unisci due array di utenti in uno solo utilizzando il metodo concat().
 
