@@ -206,33 +206,74 @@ const mediaNumeri =
 const parolaDaTrovare = 'mela';
 
 const occorrenzaParola = stringhe.reduce((numParole, parola) => {
-  if (parola === parolaDaTrovare) {
+  if (parola.toLocaleLowerCase === parolaDaTrovare.toLocaleLowerCase) {
     numParole++;
   }
 
   return numParole;
 }, 0);
 
-console.log(occorrenzaParola);
+//console.log(occorrenzaParola);
 
 // REDUCE - Array di oggetti
 
 //   Calcola la somma di tutte le pubblicazioni dei libri nell'array libri utilizzando reduce().
 
-//   Trova l'utente con la email 'david@gmail.com' nell'array utenti utilizzando reduce().
+const pubblicationiTotali = libri.reduce(
+  (totale, libro) => totale + libro.pubblicazione,
+  0
+);
+
+//console.log(pubblicationiTotali);
 
 //   Calcola il prezzo totale dei prodotti disponibili in stock nell'array prodotti utilizzando reduce().
 
-//   Trova la città con il nome 'Parigi' nell'array citta utilizzando reduce().
+const prezzoTotale = prodotti.reduce((totale, prodotto) => {
+  if (prodotto.inStock) {
+    return totale + prodotto.prezzo;
+  }
+  return totale;
+}, 0);
+
+//console.log(prezzoTotale);
 
 //   Calcola la media dei punteggi in matematica degli studenti nell'array studenti utilizzando reduce().
 
+const mediaMatematica =
+  studenti.reduce((media, punteggio) => media + punteggio.matematica, 0) /
+  studenti.length;
+
+//console.log(mediaMatematica);
+
 //   Conta quante volte lo stato 'spedito' appare nell'array ordini utilizzando reduce().
 
-//   Trova l'evento con la data '2023-08-15' nell'array eventi utilizzando reduce().
+const ordiniSpediti = ordini.reduce((totaleSpediti, ordine) => {
+  if (ordine.stato === 'spedito') {
+    totaleSpediti++;
+  }
+
+  return totaleSpediti;
+}, 0);
+
+//console.log(ordiniSpediti);
 
 //   Calcola il numero totale di articoli in vendita nell'array articoli utilizzando reduce().
 
-//   Trova il libro con la pubblicazione più recente nell'array libri utilizzando reduce().
+const articoliInVendita = articoli.reduce((totale, articolo) => {
+  if (articolo.inVendita) {
+    totale++;
+  }
+
+  return totale;
+}, 0);
+
+//console.log(articoliInVendita);
 
 //   Calcola la somma delle lunghezze delle email degli utenti nell'array utenti utilizzando reduce().
+
+const lunghezzaEmail = utenti.reduce(
+  (lunghezzaTotale, utente) => lunghezzaTotale + utente.email.length,
+  0
+);
+
+//console.log(lunghezzaEmail);

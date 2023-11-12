@@ -79,6 +79,10 @@ Quando invece abbiamo la necessità di iterare e ritornare dati per ogni element
 
 Stessa logica di funzionamento del forEach(), ma ritorna un array con gli elementi ciclati ed eventuali condizioni da rispettare
 
+item -> restituisce il singolo elemento
+index -> se lo inserisco come parametro, memorizza l'indice dell'elemento
+array -> se lo inserisco come parametro, se richiamato restituisce tutti i dati del nuovo array con le sue eventuali modifiche -> rari casi -> si usa per effettuare controlli o svolgere operazioni all'interno del map
+
 let result = arr.map(function(item, index, array) {
   // ritorna il nuovo valore piuttosto di item
 })

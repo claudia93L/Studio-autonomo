@@ -156,8 +156,6 @@ copiaUtenti.splice(0, 1);
 
 //   Modifica il prezzo di un prodotto nell'array prodotti utilizzando il metodo splice().
 
-// AIUTO
-
 /* const copiaProdotti = [...prodotti];
 
 const indiceProdotto = copiaProdotti.length;
