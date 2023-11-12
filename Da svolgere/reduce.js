@@ -65,7 +65,7 @@ const articoli = [
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Array di stringhe
-const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
+const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante', 'mela'];
 
 // Array di stringhe e numeri
 const stringheENumeri = [
@@ -107,7 +107,14 @@ const numMax = numeri.reduce(
 
 //   Concatena tutte le stringhe in un array di stringhe utilizzando reduce().
 
-// Valore iniziale pari a stringa vuota '' perchè sto usando concat. Quando si inizia con una stringa vuota come accumulatore, si garantisce che il risultato finale sia una stringa, poiché la concatenazione di una stringa con qualsiasi altro tipo di dato restituirà una stringa.
+/* 
+
+Aiuto di Chat sulla scrittura del valore iniziale con stringhe vuote
+
+Valore iniziale pari a stringa vuota '' perchè sto usando concat. Quando si inizia con una stringa vuota come accumulatore, si garantisce che il risultato finale sia una stringa, poiché la concatenazione di una stringa con qualsiasi altro tipo di dato restituirà una stringa.
+
+*/
+
 const stringheUnite = stringhe.reduce(
   (accumulatore, stringa) => accumulatore.concat(stringa),
   ''
@@ -144,16 +151,69 @@ const lunghezzaStringhe = stringhe.reduce(
 
 //   Trova il primo numero pari in un array di numeri utilizzando reduce().
 
-// DA CONTINUARE DOMANI
-const numeroPari = numeri.reduce((numPari, numero) => numero % 2 === 0);
+/*
 
-console.log(numeroPari);
+Aiuto di Chat sulla scrittura della condizione (numPari === undefined)
+
+con condizione if(numero % 2 === 0) ottengo l'ultimo numero pari presente nell'array
+
+Il motivo per cui ottieni l'ultimo numero pari anziché il primo è che stai sempre restituendo il numero corrente non appena trovi un numero pari. La funzione di riduzione (reduce()) restituirà il risultato dell'ultima chiamata della funzione di riduzione, che nel tuo caso è il numero pari più recentemente trovato.
+
+Per ottenere il primo numero pari, dovresti interrompere la riduzione non appena trovi il primo numero pari. Puoi farlo restituendo il valore corrente dell'accumulatore se hai già trovato il primo numero pari. Ecco come puoi modificarlo:
+
+Nel codice fornito, undefined è utilizzato come valore iniziale dell'accumulatore nella funzione reduce(). Questo è fatto per gestire il caso in cui non è ancora stato trovato alcun numero pari.
+
+Quando la funzione di riduzione viene chiamata per la prima volta, numPari è impostato su undefined. Se viene trovato un numero pari durante la successiva iterazione, numPari viene aggiornato a quel numero e successivamente non sarà più undefined. In sostanza, undefined viene utilizzato come segnaposto per indicare che non è stato ancora trovato alcun numero pari.
+
+Se non fornissimo undefined come valore iniziale e non trovassimo mai un numero pari nell'array, la funzione di riduzione restituirebbe undefined come risultato predefinito. Quindi, l'utilizzo di undefined come valore iniziale ci consente di distinguere tra il caso in cui non è stato trovato alcun numero pari e il caso in cui il primo numero pari è stato trovato e restituito.
+
+*/
+
+const numeroPari = numeri.reduce((numPari, numero) => {
+  if (numPari === undefined && numero % 2 === 0) {
+    return numero;
+  }
+
+  return numPari; // Se ho già trovato il primo numero pari, mantieni lo stesso valore.
+}, undefined);
+
+//console.log(numeroPari);
 
 //   Crea una stringa che contenga la concatenazione di tutti gli elementi di un array di stringhe, separati da virgole, utilizzando reduce().
 
+const stringheConcat = stringhe.reduce((stringaUnita, stringa) =>
+  stringaUnita.concat(', ', stringa)
+);
+
+//console.log(stringheConcat);
+
 //   Calcola la media di tutti i numeri in un array di numeri utilizzando reduce().
 
+/* 
+Aiuto di Chat su dove posizionare la divisione
+
+In questo codice, stai sommando tutti i numeri con la funzione di riduzione e poi dividendo la somma per la lunghezza dell'array all'esterno della funzione di riduzione. L'argomento 0 di reduce è il valore iniziale della somma.
+
+*/
+
+const mediaNumeri =
+  numeri.reduce((media, numero) => media + numero, 0) / numeri.length;
+
+//console.log(mediaNumeri);
+
 //   Trova il numero di occorrenze di una parola specifica in un array di stringhe utilizzando reduce().
+
+const parolaDaTrovare = 'mela';
+
+const occorrenzaParola = stringhe.reduce((numParole, parola) => {
+  if (parola === parolaDaTrovare) {
+    numParole++;
+  }
+
+  return numParole;
+}, 0);
+
+console.log(occorrenzaParola);
 
 // REDUCE - Array di oggetti
 
