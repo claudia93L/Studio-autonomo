@@ -162,3 +162,27 @@ Se non c’è un valore iniziale, allora reduce prende il primo elemento dell’
 Il metodo arr.reduceRight fa esattamente la stessa cosa, ma da destra verso sinistra.
 
 */
+
+// FIND E FINDINDEX
+
+/*
+
+Come possiamo trovare un oggetto che soddisfi specifiche condizioni?
+
+In questi casi si utilizza il metodo arr.find, che trova il PRIMO elemento che soddisfa le condizioni specificate
+
+La sintassi è:
+
+let result = arr.find(function(item, index, array) {
+  // se viene ritornato true, viene ritornato l'elemento e l'iterazione si ferma
+  // altrimenti ritorna undefined
+});
+
+La funzione viene chiamata per ogni elemento dell’array:
+
+item è l’elemento.
+index è il suo indice.
+array è l’array stesso.
+Se la chiamata ritorna true, la ricerca viene interrotta e viene ritornato item. Se non viene trovato nulla verrà ritornato undefined.
+
+*/

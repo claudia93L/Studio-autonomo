@@ -62,7 +62,7 @@ const articoli = [
   { nome: 'Articolo E', inVendita: true },
 ];
 
-const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -5, -8];
 
 // Array di stringhe
 const stringhe = ['mela', 'banana', 'cetriolo', 'dado', 'elefante'];
@@ -93,7 +93,15 @@ const arrayDate = [
 
 //   Trova il primo numero negativo in un array di numeri utilizzando find().
 
+const numeroNegativo = numeri.find((el) => el < 0);
+
+//console.log(numeroNegativo);
+
 //   Trova il primo numero pari in un array di numeri utilizzando find().
+
+const numeroPari = numeri.find((el) => el % 2 === 0);
+
+//console.log(numeroPari);
 
 //   Trova la prima stringa in un array di stringhe con una lunghezza superiore a 8 caratteri utilizzando find().
 
@@ -115,9 +123,21 @@ const arrayDate = [
 
 //   Trova il primo libro nell'array libri pubblicato prima del 2000 utilizzando find().
 
+const primoLibro = libri.find((el) => el.pubblicazione < 2000);
+
+//console.log(primoLibro);
+
 //   Trova il primo utente nell'array utenti con un'email che ha il dominio 'yahoo.com' utilizzando find().
 
+const emailYahoo = utenti.find((el) => el.email.includes('yahoo.com'));
+
+//console.log(emailYahoo);
+
 //   Trova il primo prodotto nell'array prodotti che è in stock utilizzando find().
+
+const prodottoStock = prodotti.find((el) => el.inStock === true);
+
+//console.log(prodottoStock);
 
 //   Trova la prima città nell'array citta con il paese 'Francia' utilizzando find().
 
@@ -127,8 +147,16 @@ const arrayDate = [
 
 //   Trova il primo evento nell'array eventi che si svolge dopo il 2023-09-01 utilizzando find().
 
+const primoEvento = eventi.find((el) => el.data > '2023-09-01');
+
+//console.log(primoEvento);
+
 //   Trova il primo articolo nell'array articoli che non è in vendita utilizzando find().
 
 //   Trova il primo libro nell'array libri con un titolo di lunghezza maggiore di 10 caratteri utilizzando find().
+
+const titoloLungo = libri.find((el) => el.titolo.length > 10);
+
+console.log(titoloLungo);
 
 //   Trova il primo utente nell'array utenti con un nome di lunghezza maggiore di 5 caratteri utilizzando find().
