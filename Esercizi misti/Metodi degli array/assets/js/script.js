@@ -55,10 +55,11 @@ function calcAverageHumanAge(dogsAges) {
       }
     })
     .filter((humanAge) => humanAge >= 18);
-
+  // sommo le età umane
   const summedAges = humanAges.reduce((acc, humanAge) => acc + humanAge, 0);
 
   console.log('Le età dei cani convertite in anni umani sono ' + humanAges);
+  // ricavo la media delle età umane
   console.log(
     `La media di anni umani è pari a ${Math.floor(
       summedAges / humanAges.length
@@ -71,3 +72,24 @@ calcAverageHumanAge(dogsKate);
 
 // ESERCIZIO 3
 // riscrivi la funzione calcAverageHumanAge utilizzando un arrow function
+
+const calcAverageHumanAge = (dogsAges) => {
+  const humanAges = dogsAges
+    .map((dogAge) => {
+      if (dogAge <= 2) {
+        return 2 * dogAge;
+      } else {
+        return 16 + dogAge * 4;
+      }
+    })
+    .filter((humanAge) => humanAge >= 18);
+
+  const summedAges = humanAges.reduce((acc, humanAge) => acc + humanAge, 0);
+
+  console.log('Le età dei cani convertite in anni umani sono ' + humanAges);
+  console.log(
+    `La media di anni umani è pari a ${Math.floor(
+      summedAges / humanAges.length
+    )}`
+  );
+};
